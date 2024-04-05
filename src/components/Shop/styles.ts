@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { Div } from "../Homepage/styles";
 
-export const Main = styled(Div)`
+export const Div = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 1rem;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    padding: 4rem;
+    gap: 4rem;
+    background-color: var(--blue);
 `;

@@ -31,7 +31,7 @@ export const NavigationBar = () => {
             </NavigationLink>
           </li>
           <li>
-            <NavigationLink to="/shop/1">
+            <NavigationLink to="/shop/page1">
               <Svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
