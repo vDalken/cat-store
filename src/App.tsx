@@ -18,7 +18,7 @@ export const App: React.FC = () => {
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/cat-store" element={<Homepage />} />
+        
         {[...Array(totalPages)].map((_, index) => (
           <Route
             key={index + 1}
