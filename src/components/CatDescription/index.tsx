@@ -43,10 +43,7 @@ const CatDescription: React.FC<CatDescriptionProps> = ({ id }) => {
           <h2>{cat.name}</h2>
           <Break />
           <Section>
-            <StyledLink
-              href={`https://en.wikipedia.org/wiki/${cat.race}_cat`}
-              rel="noopener noreferrer"
-            >
+          <StyledLink href={`https://en.wikipedia.org/wiki/${cat.race}_cat`} target="_blank" rel="noopener noreferrer">
               {cat.race}
             </StyledLink>
             <ul>
@@ -57,9 +54,7 @@ const CatDescription: React.FC<CatDescriptionProps> = ({ id }) => {
           <h2>About</h2>
           <InfoSection>
             <h3>Age</h3>
-            <p>
-              {cat.age} {cat.age > 1 ? 'years' : 'year'}
-            </p>
+            <p>{cat.age} {cat.age>1 ? "years": "year"}</p>
           </InfoSection>
           <InfoSection>
             <h3>Color</h3>
