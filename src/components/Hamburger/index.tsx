@@ -8,11 +8,11 @@ export function Hamburger() {
     return (
       <>
         <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
-          <Icon clicked={click}>&nbsp;</Icon>
+          <Icon $clicked={click}>&nbsp;</Icon>
         </MenuLabel>
-        <NavBackground clicked={click}>&nbsp;</NavBackground>
+        <NavBackground $clicked={click}>&nbsp;</NavBackground>
   
-        <Navigation clicked={click}>
+        <Navigation $clicked={click}>
           <List>
             <li>
               <ItemLink onClick={handleClick} to="/">
