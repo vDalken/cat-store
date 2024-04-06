@@ -40,11 +40,19 @@ export const PageNumberContainer = styled.ul`
     border-radius: 100px;
     text-align: center;
     color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:focus {
+      outline: none;
+      border: 2px solid var(--blue);
+    }
   }
 `
 
 interface PaginationLinkContainerProps {
-  $justifyContent: string;
+  $justifyContent: string
 }
 
 export const PaginationLinkContainer = styled.div<PaginationLinkContainerProps>`
@@ -52,4 +60,4 @@ export const PaginationLinkContainer = styled.div<PaginationLinkContainerProps>`
   display: flex;
   justify-content: ${({ $justifyContent }) => $justifyContent};
   align-items: center;
-`;
+`

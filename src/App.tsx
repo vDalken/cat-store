@@ -6,6 +6,7 @@ import catsData from './assets/data/cat_data.json'
 import Shop from './components/Shop'
 import { Pagination } from './components/Pagination'
 import CatDescription from './components/CatDescription'
+import { Footer } from './components/Footer'
 
 export const App: React.FC = () => {
   const catsArray = Object.values(catsData)
@@ -18,7 +19,7 @@ export const App: React.FC = () => {
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        
+        <Route path="/cat-store" element={<Homepage />} />
         {[...Array(totalPages)].map((_, index) => (
           <Route
             key={index + 1}
@@ -56,6 +57,7 @@ export const App: React.FC = () => {
           />
         ))}
       </Routes>
+      <Footer />
     </>
   )
 }
