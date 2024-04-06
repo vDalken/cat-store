@@ -23,7 +23,7 @@ export const App: React.FC = () => {
         {[...Array(totalPages)].map((_, index) => (
           <Route
             key={index + 1}
-            path={`/shop/page${index + 1}`}
+            path={`cat-store/shop/page${index + 1}`}
             element={
               <>
                 <Shop cats={catsArray} page={index + 1} />
@@ -32,7 +32,7 @@ export const App: React.FC = () => {
                   totalPages={totalPages}
                   previousButtonText="Previous"
                   nextButtonText="Next"
-                  partialRoute="/shop/page"
+                  partialRoute="/cat-store/shop/page"
                 />
               </>
             }
@@ -41,7 +41,7 @@ export const App: React.FC = () => {
         {catsArray.map((_, i) => (
           <Route
             key={i}
-            path={`/cat/${i+1}`}
+            path={`cat-store/cat/${i+1}`}
             element={
               <>
                 <CatDescription id={i.toString()} />
@@ -50,7 +50,7 @@ export const App: React.FC = () => {
                   totalPages={totalCats}
                   previousButtonText='Previous Cat'
                   nextButtonText='Next Cat'
-                  partialRoute='/cat/'
+                  partialRoute='/cat-store/cat/'
                 />
               </>
             }
