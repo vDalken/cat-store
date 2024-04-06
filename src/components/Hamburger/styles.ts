@@ -14,8 +14,8 @@ interface NavigationProps {
 }
 
 const COLORS = {
-  primaryDark: '#115b4c',
-  primaryLight: '#B6EDC8'
+  primaryDark: '#C7DFC5',
+  primaryLight: '#373737'
 }
 
 export const MenuLabel = styled.label`
@@ -27,13 +27,17 @@ export const MenuLabel = styled.label`
   z-index: 1000;
   box-shadow: 0 1rem 3rem rgba(182, 237, 200, 0.3);
   text-align: center;
-  transform: scale(.8);
+  transform: scale(.7);
+
+  @media screen and (min-width: 750px) {
+    display: none;
+  }
 `
 
 export const NavBackground = styled.div<NavBackgroundProps>`
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 2.5rem;
+  right: 2.5rem;
   background-image: radial-gradient(
     ${COLORS.primaryDark},
     ${COLORS.primaryLight}
@@ -48,7 +52,7 @@ export const NavBackground = styled.div<NavBackgroundProps>`
 
 export const Icon = styled.span<IconProps>`
   position: relative;
-  background-color: ${(props) => (props.clicked ? 'transparent' : 'black')};
+  background-color: ${(props) => (props.clicked ? 'transparent' : '#C7DFC5')};
   width: 3rem;
   height: 2px;
   display: inline-block;
@@ -58,7 +62,7 @@ export const Icon = styled.span<IconProps>`
   &::before,
   &::after {
     content: '';
-    background-color: black;
+    background-color: #C7DFC5;
     width: 3rem;
     height: 2px;
     display: inline-block;
