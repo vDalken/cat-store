@@ -12,11 +12,16 @@ export const Image = styled.img`
 `
 
 export const ImageArea = styled.div`
-  width: 20rem;
-  height: 20rem;
+  width: 35rem;
+  height: 35rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 750px) {
+    width: 20rem;
+    height: 20rem;
+  }
 `
 
 export const Background = styled.div`
@@ -40,9 +45,10 @@ export const Info = styled.div`
   flex-direction: column;
   gap: 0.6rem;
 
-  > h2,h3 {
+  > h2,
+  h3 {
     color: var(--black);
-    opacity: .8;
+    opacity: 0.8;
   }
 `
 
@@ -75,7 +81,7 @@ export const Break = styled.div`
 `
 
 export const InfoSection = styled.div`
-display: flex;
-flex-direction: column;
-gap: .2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 `

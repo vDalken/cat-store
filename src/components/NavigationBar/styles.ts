@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-const above400px = (args: TemplateStringsArray)  => css`
+const above400px = (args: TemplateStringsArray) => css`
   @media (min-width: 750px) {
     ${css(args)}
   }
@@ -16,9 +16,8 @@ export const Nav = styled.nav`
   padding: 1.6rem;
 
   @media screen and (max-width: 750px) {
-    padding: .8rem;
+    padding: 0.8rem;
   }
-
 `
 
 export const Ul = styled.ul`
@@ -47,7 +46,7 @@ export const NavigationLink = styled(NavLink)`
     }
   }
 
-  &:active {
+  &.active {
     text-decoration: underline;
   }
 `
