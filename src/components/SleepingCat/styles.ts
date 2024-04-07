@@ -5,6 +5,10 @@ export const Container = styled.div`
   width: 350px;
   position: relative;
   transform: scale(1.2);
+
+  @media screen and (max-width: 750px) {
+    transform: scale(.8);
+  }
 `
 
 export const Cat = styled.div`

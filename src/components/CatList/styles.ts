@@ -22,6 +22,10 @@ export const CatCard = styled.div<ContainerProps>`
   &:hover{
     border: 2px solid var(--green);
   }
+
+  @media screen and (max-width: 750px) {
+    transform: scale(.8);
+  }
 `
 
 export const CatName = styled.p`

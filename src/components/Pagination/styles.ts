@@ -26,6 +26,11 @@ export const PaginationLink = styled(Link)`
     background-color: #fff;
     color: var(--blue);
   }
+
+  @media screen and (max-width: 750px) {
+    font-size: 1rem;
+  }
+
 `
 
 export const PageNumberContainer = styled.ul`

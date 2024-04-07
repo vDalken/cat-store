@@ -16,27 +16,17 @@ export function Hamburger() {
           <List>
             <li>
               <ItemLink onClick={handleClick} to="/">
-                Home
+                Homepage
               </ItemLink>
             </li>
             <li>
-              <ItemLink onClick={handleClick} to="/about">
-                About
+              <ItemLink onClick={handleClick} to="/shop/page1">
+                Shop
               </ItemLink>
             </li>
             <li>
-              <ItemLink onClick={handleClick} to="/portfolio">
-                Portfolio
-              </ItemLink>
-            </li>
-            <li>
-              <ItemLink onClick={handleClick} to="/blog">
-                Blog
-              </ItemLink>
-            </li>
-            <li>
-              <ItemLink onClick={handleClick} to="/contact">
-                Contact Us
+              <ItemLink onClick={handleClick} to="/cat/1">
+                Cats
               </ItemLink>
             </li>
           </List>

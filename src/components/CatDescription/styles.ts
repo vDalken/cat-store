@@ -12,8 +12,8 @@ export const Image = styled.img`
 `
 
 export const ImageArea = styled.div`
-  width: 35rem;
-  height: 35rem;
+  width: 20rem;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;

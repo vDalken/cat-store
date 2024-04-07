@@ -14,6 +14,11 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1.6rem;
+
+  @media screen and (max-width: 750px) {
+    padding: .8rem;
+  }
+
 `
 
 export const Ul = styled.ul`

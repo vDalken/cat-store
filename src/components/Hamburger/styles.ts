@@ -27,7 +27,7 @@ export const MenuLabel = styled.label`
   z-index: 1000;
   box-shadow: 0 1rem 3rem rgba(182, 237, 200, 0.3);
   text-align: center;
-  transform: scale(.7);
+  transform: scale(.5);
 
   @media screen and (min-width: 750px) {
     display: none;
@@ -117,7 +117,7 @@ export const ItemLink = styled(NavLink)`
   font-size: 3rem;
   font-weight: 300;
   text-decoration: none;
-  color: ${COLORS.primaryLight};
+  color: #fff;
   padding: 1rem 2rem;
 
   background-image: linear-gradient(
