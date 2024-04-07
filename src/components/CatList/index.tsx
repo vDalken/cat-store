@@ -12,7 +12,7 @@ const CatList: React.FC<CatListProps> = ({ cats, page }) => {
   return (
     <>
       {cats.map((cat, i) => (
-        <StyledLink to={`/cat-store/cat/${i + 1 + startIndex}`} key={i}>
+        <StyledLink to={`/cat/${i + 1 + startIndex}`} key={i}>
           <CatCard $backgroundImage={cat.image}>
             <CatName>{cat.name}</CatName>
           </CatCard>

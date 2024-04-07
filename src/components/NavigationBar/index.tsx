@@ -6,7 +6,7 @@ export const NavigationBar = () => {
     <>
       <Nav>
         <LogoContainer>
-          <NavigationLink to="/cat-store">
+          <NavigationLink to="/">
           <Svg
             width="24"
             height="24"
@@ -20,7 +20,7 @@ export const NavigationBar = () => {
         </LogoContainer>
         <Ul>
           <li>
-            <NavigationLink to="cat-store/shop/page1">
+            <NavigationLink to="/shop/page1">
               <Svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -33,7 +33,7 @@ export const NavigationBar = () => {
             </NavigationLink>
           </li>
           <li>
-            <NavigationLink to="cat-store/cat/1">
+            <NavigationLink to="/cat/1">
               <Svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
