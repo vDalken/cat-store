@@ -7,6 +7,7 @@ import Shop from './components/Shop'
 import { Pagination } from './components/Pagination'
 import CatDescription from './components/CatDescription'
 import { Footer } from './components/Footer'
+import { Error } from './components/Error'
 
 export const App: React.FC = () => {
   const catsArray = Object.values(catsData)
@@ -56,6 +57,7 @@ export const App: React.FC = () => {
             }
           />
         ))}
+        <Route path='*' element={<Error />}/>
       </Routes>
       <Footer />
     </>
