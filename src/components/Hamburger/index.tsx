@@ -30,7 +30,7 @@ export function Hamburger() {
               </ItemLink>
             </li>
             <li>
-              <ItemLink onClick={handleClick} to="/favorites">
+              <ItemLink onClick={handleClick} to="/favorites"> {/*to make deploy*/}
                 Favorites
               </ItemLink>
             </li>
