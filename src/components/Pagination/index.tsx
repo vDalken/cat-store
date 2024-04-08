@@ -84,7 +84,7 @@ export const Pagination = ({
         >
           {inputPage}
         </span>
-        <span>...{totalPages}</span>
+        <p>/{totalPages}</p>
       </PageNumberContainer>
 
       <PaginationLinkContainer $justifyContent="flex-start">

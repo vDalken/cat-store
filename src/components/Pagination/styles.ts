@@ -36,10 +36,29 @@ export const PaginationLink = styled(Link)`
 export const PageNumberContainer = styled.ul`
   display: flex;
   justify-content: center;
+  align-items: center;
 
   > span {
     list-style: none;
-    width: 40px;
+    width: 30px;
+    height: 30px;
+    line-height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--blue);
+
+    &:focus {
+      outline: none;
+    }
+  
+  }
+  >p{
+      list-style: none;
+    width: 20px;
     height: 40px;
     line-height: 40px;
     border-radius: 100px;
@@ -48,12 +67,7 @@ export const PageNumberContainer = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &:focus {
-      outline: none;
-      border: 2px solid var(--blue);
     }
-  }
 `
 
 interface PaginationLinkContainerProps {
