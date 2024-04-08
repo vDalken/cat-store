@@ -29,6 +29,11 @@ export function Hamburger() {
                 Cats
               </ItemLink>
             </li>
+            <li>
+              <ItemLink onClick={handleClick} to="/favorites">
+                Favorites
+              </ItemLink>
+            </li>
           </List>
         </Navigation>
       </>
