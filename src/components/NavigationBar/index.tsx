@@ -1,37 +1,23 @@
 import { Hamburger } from '../Hamburger'
 import { Nav, LogoContainer, Svg, Ul, NavigationLink } from './styles'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
 
-export const NavigationBar = () => {
+export const NavigationBar = ({ currentShopUrl, currentCatUrl }: { currentShopUrl: string, currentCatUrl: string }) => {
   const location = useLocation()
 
   const navigate = useNavigate()
 
-  useEffect(() => {
-    if (location.pathname.includes('/cat')) {
-      localStorage.setItem('lastCatPath', location.pathname)
-    }
-    if (location.pathname.includes('/shop')) {
-      localStorage.setItem('lastShopPath', location.pathname)
-    }
-  }, [location.pathname])
-
   const handleCatsLinkClick = () => {
-    const lastCatPath = localStorage.getItem('lastCatPath')
-
-    if (lastCatPath) {
-      navigate(lastCatPath)
+    if (currentCatUrl) {
+      navigate(currentCatUrl)
     } else {
       navigate('/cat/1')
     }
   }
 
   const handleShopLinkClick = () => {
-    const lastShopPath = localStorage.getItem('lastShopPath')
-
-    if (lastShopPath) {
-      navigate(lastShopPath)
+    if (currentShopUrl) {
+      navigate(currentShopUrl)
     } else {
       navigate('/shop/page1')
     }

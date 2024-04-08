@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import catsData from '../../assets/data/cat_data.json'
 import { Cat } from '../../Cat'
 import {
@@ -16,17 +16,25 @@ import {
   Section,
   StyledLink
 } from './styles'
+import { useLocation } from 'react-router-dom';
 
 interface CatDescriptionProps {
   id: string;
   addToFavorites: (catId: string) => void;
+  setCurrentUrl: (url: string) => void;
 }
 
-const CatDescription: React.FC<CatDescriptionProps> = ({ id, addToFavorites }) => {
+const CatDescription: React.FC<CatDescriptionProps> = ({ id, addToFavorites, setCurrentUrl }) => {
   const catId = parseInt(id)
   const catsArray = Object.values(catsData)
 
   const cat: Cat | undefined = catsArray[catId]
+
+  const location = useLocation()
+  
+  useEffect(()=>{
+    setCurrentUrl(location.pathname)
+  },[location.pathname,setCurrentUrl])
 
   if (!cat) {
     return <div>Product not found</div>
@@ -35,6 +43,8 @@ const CatDescription: React.FC<CatDescriptionProps> = ({ id, addToFavorites }) =
   const handleAddToFavorites = () => {
     addToFavorites(id);
   };
+
+
 
   return (
     <div>

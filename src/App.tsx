@@ -16,6 +16,8 @@ export const App: React.FC = () => {
   const totalCats = catsArray.length
   const totalPages = Math.ceil(totalCats / 10)
   const [favoriteCats, setFavoriteCats] = useState<string[]>([]);
+  const [currentShopUrl, setCurrentShopUrl] = useState("")
+  const [currentCatUrl, setCurrentCatUrl] = useState("")
 
   const addToFavorites = (catId: string) => {
     setFavoriteCats([...favoriteCats, catId]);
@@ -24,7 +26,7 @@ export const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
-      <NavigationBar />
+      <NavigationBar currentShopUrl={currentShopUrl} currentCatUrl={currentCatUrl}/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/cat-store" element={<Homepage />} />
@@ -34,7 +36,7 @@ export const App: React.FC = () => {
             path={`shop/page${index + 1}`}
             element={
               <>
-                <Shop cats={catsArray} page={index + 1} />
+                <Shop cats={catsArray} page={index + 1} setCurrentUrl={setCurrentShopUrl}/>
                 <Pagination
                   currentPage={index + 1}
                   totalPages={totalPages}
@@ -52,7 +54,7 @@ export const App: React.FC = () => {
             path={`/cat/${i+1}`}
             element={
               <>
-                <CatDescription id={i.toString()} addToFavorites={addToFavorites}/>
+                <CatDescription id={i.toString()} addToFavorites={addToFavorites} setCurrentUrl={setCurrentCatUrl}/>
                 <Pagination 
                   currentPage={i+1}
                   totalPages={totalCats}
