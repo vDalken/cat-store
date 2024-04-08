@@ -85,3 +85,49 @@ export const InfoSection = styled.div`
   flex-direction: column;
   gap: 0.2rem;
 `
+
+export const Div = styled.div`
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 1005px) {
+      flex-direction: column;
+
+  }
+`
+
+export const Question = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  color: var(--green);
+  box-shadow: 0 10px 30px -15px #000;
+  padding: 2rem;
+  border-radius: 0.4rem;
+`
+
+export const ButtonHolder = styled.div`
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+
+  >button{
+    color: var(--black);
+    background-color: transparent;
+    border: 2px solid var(--green);
+    border-radius: .4rem;
+    cursor: pointer;
+    padding: .4rem;
+  }
+
+  >button:hover{
+    background-color: var(--green);
+    color: #fff;
+    border: none;
+  }
+`

@@ -8,11 +8,18 @@ import { Pagination } from './components/Pagination'
 import CatDescription from './components/CatDescription'
 import { Footer } from './components/Footer'
 import { Error } from './components/Error'
+import { Favorites } from './components/Favorites'
+import { useState } from 'react'
 
 export const App: React.FC = () => {
   const catsArray = Object.values(catsData)
   const totalCats = catsArray.length
   const totalPages = Math.ceil(totalCats / 10)
+  const [favoriteCats, setFavoriteCats] = useState<string[]>([]);
+
+  const addToFavorites = (catId: string) => {
+    setFavoriteCats([...favoriteCats, catId]);
+  };
 
   return (
     <>
@@ -45,7 +52,7 @@ export const App: React.FC = () => {
             path={`/cat/${i+1}`}
             element={
               <>
-                <CatDescription id={i.toString()} />
+                <CatDescription id={i.toString()} addToFavorites={addToFavorites}/>
                 <Pagination 
                   currentPage={i+1}
                   totalPages={totalCats}
@@ -57,7 +64,8 @@ export const App: React.FC = () => {
             }
           />
         ))}
-        <Route path='*' element={<Error />}/>
+        <Route path='/favorites' element={<Favorites favoritesArray={favoriteCats} />}/>
+        <Route path='*' element={<Error/>}/>
       </Routes>
       <Footer />
     </>
