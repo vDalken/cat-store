@@ -2,18 +2,18 @@ import styled from 'styled-components'
 
 export const ImageContainer = styled.div`
   background-color: var(--black);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 `
 
 export const Image = styled.img`
-  width: 100%;
+  display: block;
+  width: 24rem;
+  height: 24rem;
+  object-fit: cover;
+
 `
 
 export const ImageArea = styled.div`
-  width: 35rem;
-  height: 35rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,10 @@ export const ImageArea = styled.div`
 
 export const Background = styled.div`
   background-color: black;
-  height: 100%;
+  height: 46vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const InfoContainer = styled.div`
@@ -87,12 +90,11 @@ export const InfoSection = styled.div`
 `
 
 export const Div = styled.div`
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    @media screen and (max-width: 1005px) {
-      flex-direction: column;
-
+  @media screen and (max-width: 1005px) {
+    flex-direction: column;
   }
 `
 
@@ -116,16 +118,16 @@ export const ButtonHolder = styled.div`
   text-align: center;
   gap: 1rem;
 
-  >button{
+  > button {
     color: var(--black);
     background-color: transparent;
     border: 2px solid var(--blue);
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     cursor: pointer;
-    padding: .4rem;
+    padding: 0.4rem;
   }
 
-  >button:hover{
+  > button:hover {
     background-color: var(--blue);
     color: #fff;
     border: none;
