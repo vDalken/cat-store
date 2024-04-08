@@ -382,7 +382,7 @@ Error generating stack: `+o.message+`
     color: ${Pa.primaryDark};
     transform: translateX(1rem);
   }
-`;function c1(){const[e,t]=j.useState(!1),n=()=>t(!e);return g.jsxs(g.Fragment,{children:[g.jsx(Na,{htmlFor:"navi-toggle",onClick:n,children:g.jsx(a1,{$clicked:e,children:" "})}),g.jsx(l1,{$clicked:e,children:" "}),g.jsx(u1,{$clicked:e,children:g.jsxs(s1,{children:[g.jsx("li",{children:g.jsx(vi,{onClick:n,to:"/",children:"Homepage"})}),g.jsx("li",{children:g.jsx(vi,{onClick:n,to:"/shop/page1",children:"Shop"})}),g.jsx("li",{children:g.jsx(vi,{onClick:n,to:"/cat/1",children:"Cats"})}),g.jsx("li",{children:g.jsx(vi,{onClick:n,to:"/favorites",children:"Favorites"})})]})})]})}const f1=e=>Wr`
+`;function c1(){const[e,t]=j.useState(!1),n=()=>t(!e);return g.jsxs(g.Fragment,{children:[g.jsx(Na,{htmlFor:"navi-toggle",onClick:n,children:g.jsx(a1,{$clicked:e,children:" "})}),g.jsx(l1,{$clicked:e,children:" "}),g.jsx(u1,{$clicked:e,children:g.jsxs(s1,{children:[g.jsx("li",{children:g.jsx(vi,{onClick:n,to:"/",children:"Homepage"})}),g.jsx("li",{children:g.jsx(vi,{onClick:n,to:"/shop/page1",children:"Shop"})}),g.jsx("li",{children:g.jsx(vi,{onClick:n,to:"/cat/1",children:"Cats"})}),g.jsx("li",{children:g.jsxs(vi,{onClick:n,to:"/favorites",children:[" ","Favorites"]})})]})})]})}const f1=e=>Wr`
   @media (min-width: 750px) {
     ${Wr(e)}
   }
