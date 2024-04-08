@@ -102,7 +102,7 @@ export const Question = styled.div`
   justify-content: center;
   text-align: center;
   gap: 1rem;
-  color: var(--green);
+  color: var(--blue);
   box-shadow: 0 10px 30px -15px #000;
   padding: 2rem;
   border-radius: 0.4rem;
@@ -119,14 +119,14 @@ export const ButtonHolder = styled.div`
   >button{
     color: var(--black);
     background-color: transparent;
-    border: 2px solid var(--green);
+    border: 2px solid var(--blue);
     border-radius: .4rem;
     cursor: pointer;
     padding: .4rem;
   }
 
   >button:hover{
-    background-color: var(--green);
+    background-color: var(--blue);
     color: #fff;
     border: none;
   }
