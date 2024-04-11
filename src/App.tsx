@@ -10,33 +10,35 @@ import { Footer } from './components/Footer'
 import { Error } from './components/Error'
 import { Favorites } from './components/Favorites'
 import { useState } from 'react'
+import { Cat } from './Cat'
 
 export const App: React.FC = () => {
-  const catsArray = Object.values(catsData)
+  const [catsArray, setCatsArray] = useState<Array<Cat>>(Object.values(catsData))
+  
   const totalCats = catsArray.length
   const totalPages = Math.ceil(totalCats / 10)
-  const [favoriteCats, setFavoriteCats] = useState<string[]>([]);
+  const [favoriteCats, setFavoriteCats] = useState<Array<number>>([]);
+
   const [currentShopUrl, setCurrentShopUrl] = useState("")
   const [currentCatUrl, setCurrentCatUrl] = useState("")
 
-  const addToFavorites = (catId: string) => {
-    setFavoriteCats([...favoriteCats, catId]);
-  };
+  const [isAtCats, setIsAtCats] = useState(false)
+
 
   return (
     <>
       <GlobalStyle />
-      <NavigationBar currentShopUrl={currentShopUrl} currentCatUrl={currentCatUrl}/>
+      <NavigationBar currentShopUrl={currentShopUrl} currentCatUrl={currentCatUrl} isAtCats={isAtCats}/>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/cat-store" element={<Homepage />} />
+        <Route path="/" element={<Homepage setIsAtCats={setIsAtCats}/>} />
+        <Route path="/cat-store" element={<Homepage setIsAtCats={setIsAtCats} />} />
         {[...Array(totalPages)].map((_, index) => (
           <Route
             key={index + 1}
             path={`shop/page${index + 1}`}
             element={
               <>
-                <Shop cats={catsArray} page={index + 1} setCurrentUrl={setCurrentShopUrl}/>
+                <Shop cats={catsArray} page={index + 1} setCurrentUrl={setCurrentShopUrl} favoriteCats={favoriteCats} setCatsArray={setCatsArray}/>
                 <Pagination
                   currentPage={index + 1}
                   totalPages={totalPages}
@@ -54,7 +56,7 @@ export const App: React.FC = () => {
             path={`/cat/${i+1}`}
             element={
               <>
-                <CatDescription id={i.toString()} addToFavorites={addToFavorites} setCurrentUrl={setCurrentCatUrl}/>
+                <CatDescription id={i.toString()} setCurrentUrl={setCurrentCatUrl} setIsAtCats={setIsAtCats}/>
                 <Pagination 
                   currentPage={i+1}
                   totalPages={totalCats}
@@ -66,7 +68,7 @@ export const App: React.FC = () => {
             }
           />
         ))}
-        <Route path='/favorites' element={<Favorites favoritesArray={favoriteCats} />}/>
+        <Route path='/favorites' element={<Favorites catsArray={catsArray} favoriteCats={favoriteCats} setFavoriteCats={setFavoriteCats} setCatsArray={setCatsArray}/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
       <Footer />

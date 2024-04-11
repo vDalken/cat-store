@@ -9,9 +9,9 @@ const above400px = (args: TemplateStringsArray) => css`
 `
 
 export const Nav = styled.nav`
-  background-color: var(--green);
+  background-color: #b77e75;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 1.6rem;
 
@@ -33,17 +33,13 @@ export const Ul = styled.ul`
 
 export const NavigationLink = styled(NavLink)`
   text-decoration: none;
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   gap: 1rem;
 
   &:hover {
-    color: var(--light-green);
-
-    > svg {
-      fill: var(--light-green);
-    }
+    opacity: .6;
   }
 
   &.active {

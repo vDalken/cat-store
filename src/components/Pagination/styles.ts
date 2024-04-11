@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Box = styled.div`
-  background-color: #fff;
+  background-color: #f5c6c6;
   padding: 0.4rem;
   box-shadow: 0 10px 30px -15px #000;
   display: flex;
@@ -14,7 +14,7 @@ export const PaginationLink = styled(Link)`
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.2rem;
-  background-color: var(--blue);
+  background-color: #b77e75;
   border: none;
   cursor: pointer;
   color: #fff;
@@ -24,51 +24,49 @@ export const PaginationLink = styled(Link)`
 
   &:hover {
     background-color: #fff;
-    color: var(--blue);
+    color: #b77e75;
   }
 
   @media screen and (max-width: 750px) {
     font-size: 1rem;
   }
-
 `
 
 export const PageNumberContainer = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .2rem;
+  gap: 0.2rem;
 
   > span {
     list-style: none;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     line-height: 40px;
     border-radius: 100px;
     text-align: center;
-    color: var(--blue);
+    color: #b77e75;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--blue);
+    border: 2px solid #b77e75;
 
     &:focus {
       outline: none;
     }
-  
   }
-  >p{
-      list-style: none;
+  > p {
+    list-style: none;
     width: 20px;
     height: 40px;
     line-height: 40px;
     border-radius: 100px;
     text-align: center;
-    color: var(--blue);
+    color: #b77e75;
     display: flex;
     align-items: center;
     justify-content: center;
-    }
+  }
 `
 
 interface PaginationLinkContainerProps {

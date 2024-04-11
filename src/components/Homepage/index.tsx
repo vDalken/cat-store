@@ -1,7 +1,12 @@
 import { SleepingCat } from '../SleepingCat'
 import { CatContainer, Div, Text } from './styles'
 
-export const Homepage = () => {
+interface Homepage{
+  setIsAtCats: (boo: boolean) => void
+}
+
+export const Homepage = ({setIsAtCats}: Homepage) => {
+  setIsAtCats(false)
   return (
     <Div>
       <Text>

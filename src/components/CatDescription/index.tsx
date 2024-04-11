@@ -2,59 +2,49 @@ import React, { useEffect } from 'react'
 import catsData from '../../assets/data/cat_data.json'
 import { Cat } from '../../Cat'
 import {
-  Background,
   Break,
-  ButtonHolder,
+  Content,
   Div,
   Image,
-  ImageArea,
-  ImageContainer,
   Info,
   InfoContainer,
   InfoSection,
-  Question,
   Section,
   StyledLink
 } from './styles'
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 
 interface CatDescriptionProps {
-  id: string;
-  addToFavorites: (catId: string) => void;
-  setCurrentUrl: (url: string) => void;
+  id: string
+  setCurrentUrl: (url: string) => void
+  setIsAtCats: (boo: boolean) => void
 }
 
-const CatDescription: React.FC<CatDescriptionProps> = ({ id, addToFavorites, setCurrentUrl }) => {
+const CatDescription: React.FC<CatDescriptionProps> = ({
+  id,
+  setCurrentUrl,
+  setIsAtCats
+}) => {
   const catId = parseInt(id)
   const catsArray = Object.values(catsData)
 
   const cat: Cat | undefined = catsArray[catId]
 
   const location = useLocation()
-  
-  useEffect(()=>{
+
+  setIsAtCats(true)
+
+  useEffect(() => {
     setCurrentUrl(location.pathname)
-  },[location.pathname,setCurrentUrl])
+  }, [location.pathname, setCurrentUrl])
 
   if (!cat) {
     return <div>Product not found</div>
   }
 
-  const handleAddToFavorites = () => {
-    addToFavorites(id);
-  };
-
-
-
   return (
-    <div>
-      <ImageContainer>
-        <Background>
-          <ImageArea>
-            <Image src={cat.image} alt={cat.name} />
-          </ImageArea>
-        </Background>
-      </ImageContainer>
+    <Content>
+      <Image src={cat.image} alt={cat.name} />
       <Div>
         <InfoContainer>
           <Info>
@@ -95,17 +85,8 @@ const CatDescription: React.FC<CatDescriptionProps> = ({ id, addToFavorites, set
             </InfoSection>
           </Info>
         </InfoContainer>
-        <InfoContainer>
-          <Question>
-            <h2>Am I your favorite?</h2>
-            <ButtonHolder>
-              <button onClick={handleAddToFavorites}>Yes</button>
-              <button>No</button>
-            </ButtonHolder>
-          </Question>
-        </InfoContainer>
       </Div>
-    </div>
+    </Content>
   )
 }
 

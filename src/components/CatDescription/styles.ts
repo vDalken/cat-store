@@ -1,8 +1,15 @@
 import styled from 'styled-components'
 
-export const ImageContainer = styled.div`
-  background-color: var(--black);
-
+export const Content = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  align-items: center;
+  background-image: url('https://img.freepik.com/free-vector/flat-design-paw-prints-background_23-2151169523.jpg?w=1480&t=st=1712825623~exp=1712826223~hmac=11e536220d142a862bd503e24cacdc6860049a16468aed2f289667444a715611');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 `
 
 export const Image = styled.img`
@@ -10,26 +17,8 @@ export const Image = styled.img`
   width: 24rem;
   height: 24rem;
   object-fit: cover;
-
-`
-
-export const ImageArea = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (max-width: 750px) {
-    width: 20rem;
-    height: 20rem;
-  }
-`
-
-export const Background = styled.div`
-  background-color: black;
-  height: 46vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 1rem 1rem 0 0;
+  border: 8px solid #fff;
 `
 
 export const InfoContainer = styled.div`
@@ -47,6 +36,7 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  background-color: #fff;
 
   > h2,
   h3 {

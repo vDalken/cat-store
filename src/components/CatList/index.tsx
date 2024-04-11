@@ -1,27 +1,21 @@
-import React from 'react'
 import { Cat } from '../../Cat'
-import { Box, CatCard, Content, ImageContainer, StyledLink } from './styles'
+import { CatPod } from '../CatPod'
 
 interface CatListProps {
   cats: Cat[]
   page: number
+  allCats:Cat[]
+  favoriteCats: Array<number>
+  setCatsArray: (array: Array<Cat>) => void
 }
 
-const CatList: React.FC<CatListProps> = ({ cats, page }) => {
-  const startIndex = page === 1 ? 0 : (page - 1) * 10
+const CatList = ({ cats, page, allCats, favoriteCats, setCatsArray} :CatListProps) => {
+  const startIndex = page === 1 ? 0 : (page -1) * 10
+ 
   return (
     <>
-      {cats.map((cat, i) => (
-        <StyledLink to={`/cat/${i + 1 + startIndex}`} key={i}>
-          <Box>
-            <CatCard>
-              <ImageContainer $backgroundImage={cat.image} />
-            </CatCard>
-            <Content>
-              <span>{cat.name}</span>
-            </Content>
-          </Box>
-        </StyledLink>
+        {cats.map((cat, i) => (
+        <CatPod cat={cat}  i={i} startIndex={startIndex} cats={allCats} favoriteCats={favoriteCats} setCatsArray={setCatsArray} key={i}/>
       ))}
     </>
   )

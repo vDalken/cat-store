@@ -8,9 +8,11 @@ interface ShopProps {
   cats: Cat[]
   page: number
   setCurrentUrl: (url: string) => void;
+  favoriteCats: Array<number>
+  setCatsArray: (array: Array<Cat>) => void
 }
 
-const Shop = ({ cats, page,setCurrentUrl }: ShopProps) => {
+const Shop = ({ cats, page,setCurrentUrl, favoriteCats, setCatsArray }: ShopProps) => {
   const startIndex = (page - 1) * 10
   const endIndex = page * 10
   const catsOnPage = cats.slice(startIndex, endIndex)
@@ -23,7 +25,7 @@ const Shop = ({ cats, page,setCurrentUrl }: ShopProps) => {
   return (
     <>
       <Div>
-        <CatList cats={catsOnPage} page={page}/>
+        <CatList cats={catsOnPage} page={page} allCats={cats} favoriteCats={favoriteCats} setCatsArray={setCatsArray}/>
       </Div>
     </>
   )

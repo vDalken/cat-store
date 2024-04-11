@@ -19,15 +19,27 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-        font-family: "Poppins", serif;
+        font-family: "Lato", serif;
 
-        --blue: #C1DBE3;
+        --blue: #07E2EB;
         --green: #C7DFC5;
-        --light-green: #F6FEAA;
+        --light-green: #2B4041;
         --yellow: #FCE694;
-        --black: #373737;
+        --white: #C9B7AD;
+
+        --black:#2B4041;
+
+        --pods-color:#F4AFB4;
+        --primary-background:#07E2EB;
+        --text-color: #F81D14;
+        --accent-color: #FFF;
+        --button-background-color: #EB5900;
+        --button-text-color: #FFFFFF;
+        --highlight-text-color: #a56d4e;
+        --pagination-background-color: #6B4A36;
 
         --cats-color: var(--yellow);
+       
     }
 
     html,

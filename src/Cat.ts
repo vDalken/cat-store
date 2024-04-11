@@ -7,5 +7,6 @@ export interface Cat {
     location: string;
     image: string;
     price: number;
+    isFavorite: boolean;
   }
   

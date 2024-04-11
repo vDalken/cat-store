@@ -6,5 +6,8 @@ export const Div = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 2rem;
     color: var(--green);
+    background-color: var(--blue);
 `

@@ -6,8 +6,9 @@
         "weight": 10,
         "age": 23,
         "location": "Egypt",
-        "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=3243&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 100
+        "image": "https://media.cnn.com/api/v1/images/stellar/prod/131023161706-travel-cats-kalkan-1.jpg?q=w_2592,h_1944,x_0,y_0,c_fill/h_618",
+        "price": 100,
+        "isFavorite": false
     },
     "2": {
         "race": "Maine Coon",
@@ -16,8 +17,9 @@
         "weight": 15,
         "age": 18,
         "location": "United States",
-        "image": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=3415&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 150
+        "image": "https://www.thurstontalk.com/wp-content/uploads/2022/11/joint-animal-services-community-cat-program.jpg",
+        "price": 150,
+        "isFavorite": false
     },
     "3": {
         "race": "Persian",
@@ -26,8 +28,9 @@
         "weight": 8,
         "age": 5,
         "location": "Iran",
-        "image": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 200
+        "image": "https://c02.purpledshub.com/uploads/sites/41/2020/10/GettyImages-1194409229-crop-4477e44.jpg?w=1029&webp=1",
+        "price": 200,
+        "isFavorite": false
     },
     "4": {
         "race": "Sphynx",
@@ -36,8 +39,9 @@
         "weight": 6,
         "age": 2,
         "location": "Canada",
-        "image": "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 300
+        "image": "https://www.zooplus.co.uk/magazine/wp-content/uploads/2021/07/Indoor-Cat.jpeg",
+        "price": 300,
+        "isFavorite": false
     },
     "5": {
         "race": "Scottish Fold",
@@ -46,8 +50,9 @@
         "weight": 7,
         "age": 4,
         "location": "United Kingdom",
-        "image": "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?q=80&w=3374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 250
+        "image": "https://winnebagoanimals.org/wp-content/uploads/2021/07/Indoor-Cat.jpg",
+        "price": 250,
+        "isFavorite": false
     },
     "6": {
         "race": "Bengal",
@@ -56,8 +61,9 @@
         "weight": 12,
         "age": 6,
         "location": "India",
-        "image": "https://images.unsplash.com/photo-1561948955-570b270e7c36?q=80&w=3035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 180
+        "image": "https://www.lismore.nsw.gov.au/files/assets/public/v/1/1.-households/4.-pets-amp-animals/images/kitten.jpg?dimension=pageimage&w=480",
+        "price": 180,
+        "isFavorite": false
     },
     "7": {
         "race": "Russian Blue",
@@ -66,8 +72,9 @@
         "weight": 9,
         "age": 3,
         "location": "Russia",
-        "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 220
+        "image": "https://p.potaufeu.asahi.com/0ae7-p/picture/26833971/5a0420c80195a039a74309d2b710cf33.jpg",
+        "price": 220,
+        "isFavorite": false
     },
     "8": {
         "race": "Ragdoll",
@@ -76,8 +83,9 @@
         "weight": 11,
         "age": 7,
         "location": "Australia",
-        "image": "https://images.unsplash.com/photo-1618826411640-d6df44dd3f7a?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 280
+        "image": "https://www.ncl.ac.uk/media/wwwnclacuk/pressoffice/images/kitten-standard.jpg",
+        "price": 280,
+        "isFavorite": false
     },
     "9": {
         "race": "Abyssinian",
@@ -86,8 +94,9 @@
         "weight": 5,
         "age": 1,
         "location": "Ethiopia",
-        "image": "https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 320
+        "image": "https://media.post.rvohealth.io/wp-content/uploads/sites/4/2022/08/hand-stroking-petting-tabby-cat-1296x728-header-1024x575.jpg",
+        "price": 320,
+        "isFavorite": false
     },
     "10": {
         "race": "British Shorthair",
@@ -96,8 +105,9 @@
         "weight": 9,
         "age": 4,
         "location": "United Kingdom",
-        "image": "https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 230
+        "image": "https://hips.hearstapps.com/hmg-prod/images/cat-captions-for-instagram-6595a058e956b.jpeg",
+        "price": 230,
+        "isFavorite": false
     },
     "11": {
         "race": "Siamese",
@@ -107,7 +117,8 @@
         "age": 3,
         "location": "Thailand",
         "image": "https://images.unsplash.com/photo-1529778873920-4da4926a72c2?q=80&w=2853&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 180
+        "price": 180,
+        "isFavorite": false
     },
     "12": {
         "race": "Maine Coon",
@@ -117,7 +128,8 @@
         "age": 5,
         "location": "United States",
         "image": "https://images.unsplash.com/photo-1511044568932-338cba0ad803?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 270
+        "price": 270,
+        "isFavorite": false
     },
     "13": {
         "race": "Persian",
@@ -127,7 +139,8 @@
         "age": 2,
         "location": "Iran",
         "image": "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 300
+        "price": 300,
+        "isFavorite": false
     },
     "14": {
         "race": "Sphynx",
@@ -137,7 +150,8 @@
         "age": 1,
         "location": "Canada",
         "image": "https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 350
+        "price": 350,
+        "isFavorite": false
     },
     "15": {
         "race": "Scottish Fold",
@@ -147,7 +161,8 @@
         "age": 3,
         "location": "United Kingdom",
         "image": "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 240
+        "price": 240,
+        "isFavorite": false
     },
     "16": {
         "race": "Bengal",
@@ -157,7 +172,8 @@
         "age": 4,
         "location": "India",
         "image": "https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 200
+        "price": 200,
+        "isFavorite": false
     },
     "17": {
         "race": "Russian Blue",
@@ -167,7 +183,8 @@
         "age": 2,
         "location": "Russia",
         "image": "https://images.unsplash.com/photo-1536590158209-e9d615d525e4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 210
+        "price": 210,
+        "isFavorite": false
     },
     "18": {
         "race": "Ragdoll",
@@ -177,7 +194,8 @@
         "age": 6,
         "location": "Australia",
         "image": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 290
+        "price": 290,
+        "isFavorite": false
     },
     "19": {
         "race": "Abyssinian",
@@ -187,7 +205,8 @@
         "age": 1,
         "location": "Ethiopia",
         "image": "https://images.unsplash.com/photo-1491485880348-85d48a9e5312?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 330
+        "price": 330,
+        "isFavorite": false
     },
     "20": {
         "race": "British Shorthair",
@@ -197,7 +216,8 @@
         "age": 2,
         "location": "United Kingdom",
         "image": "https://images.unsplash.com/photo-1596854372407-baba7fef6e51?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 250
+        "price": 250,
+        "isFavorite": false
     },
     "21": {
         "race": "Siamese",
@@ -207,7 +227,8 @@
         "age": 5,
         "location": "Thailand",
         "image": "https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 190
+        "price": 190,
+        "isFavorite": false
     },
     "22": {
         "race": "Maine Coon",
@@ -217,7 +238,8 @@
         "age": 6,
         "location": "United States",
         "image": "https://images.unsplash.com/photo-1506891536236-3e07892564b7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 280
+        "price": 280,
+        "isFavorite": false
     },
     "23": {
         "race": "Persian",
@@ -227,7 +249,8 @@
         "age": 3,
         "location": "Iran",
         "image": "https://images.unsplash.com/photo-1615111784767-4d7c527f32a1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 320
+        "price": 320,
+        "isFavorite": false
     },
     "24": {
         "race": "Sphynx",
@@ -237,7 +260,8 @@
         "age": 2,
         "location": "Canada",
         "image": "https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "price": 330
+        "price": 330,
+        "isFavorite": false
     },
     "25": {
         "race": "Scottish Fold",
@@ -246,8 +270,9 @@
         "weight": 9,
         "age": 4,
         "location": "United Kingdom",
-        "image": "https://images.unsplash.com/photo-1518288774672-b94e808873ff?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 260
+        "image": "https://www.petplace.com/article/cats/pet-behavior-training/cat-behavior-training/normal-cat-behavior/media_12ff8df21ed52cf2d40df4d6f54ceec3a23af4dbf.jpeg?width=1200&format=pjpg&optimize=medium",
+        "price": 240,
+        "isFavorite": false
     },
     "26": {
         "race": "Bengal",
@@ -256,48 +281,52 @@
         "weight": 11,
         "age": 5,
         "location": "India",
-        "image": "https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 210
+        "image": "https://www.zooplus.co.uk/magazine/wp-content/uploads/2021/07/Indoor-Cat.jpeg",
+        "price": 210,
+        "isFavorite": false
     },
     "27": {
         "race": "Russian Blue",
         "name": "Loki",
-        "color": "Blue",
-        "weight": 8,
-        "age": 1,
-        "location": "Russia",
-        "image": "https://images.unsplash.com/photo-1556582305-528bffcf7af0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 220
-    },
-    "28": {
-        "race": "Ragdoll",
-        "name": "Bella",
-        "color": "Cream",
-        "weight": 10,
-        "age": 7,
-        "location": "Australia",
-        "image": "https://images.unsplash.com/photo-1572252821143-035a024857ac?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 300
-    },
-    "29": {
-        "race": "Abyssinian",
-        "name": "Leo",
-        "color": "Red",
-        "weight": 6,
-        "age": 2,
-        "location": "Ethiopia",
-        "image": "https://images.unsplash.com/photo-1598935888738-cd2622bcd437?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 350
-    },
-    "30": {
-        "race": "British Shorthair",
-        "name": "Luna",
         "color": "Gray",
         "weight": 8,
         "age": 3,
+        "location": "Russia",
+        "image": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2023/12/121423_mr_cat_fetch_feat.jpg?fit=1030%2C580&ssl=1",
+        "price": 220,
+        "isFavorite": false
+    },
+    "28": {
+        "race": "Ragdoll",
+        "name": "Luna",
+        "color": "Blue",
+        "weight": 10,
+        "age": 4,
+        "location": "Australia",
+        "image": "https://images.theconversation.com/files/443350/original/file-20220131-15-1ndq1m6.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C3354%2C2464&q=45&auto=format&w=926&fit=clip",
+        "price": 250,
+        "isFavorite": false
+    },
+    "29": {
+        "race": "Abyssinian",
+        "name": "Cleo",
+        "color": "Brown",
+        "weight": 6,
+        "age": 2,
+        "location": "Ethiopia",
+        "image": "https://www.bluecross.org.uk/sites/default/files/d8/2020-01/Moving%20house.JPG",
+        "price": 280,
+        "isFavorite": false
+    },
+    "30": {
+        "race": "British Shorthair",
+        "name": "Milo",
+        "color": "Gray",
+        "weight": 7,
+        "age": 3,
         "location": "United Kingdom",
-        "image": "https://images.unsplash.com/photo-1487300001871-12053913095d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGNhdHxlbnwwfHwwfHx8Mg%3D%3D",
-        "price": 270
+        "image": "https://www.hartz.com/wp-content/uploads/2023/05/do-cats-only-meow-to-humans-1.jpg",
+        "price": 290,
+        "isFavorite": false
     }
 }
-
