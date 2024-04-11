@@ -9,6 +9,7 @@ import { Div } from './styles'
 import { Cat } from '../../Cat'
 
 interface FavoritesProps {
+  //COMMENT DO NOT TOUCH
   catsArray: Cat[]
   favoriteCats: Array<number>
   setFavoriteCats: (array: Array<number>) => void
