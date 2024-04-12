@@ -26,6 +26,18 @@ export const Pagination = ({
   const params = useParams<{ [key: string]: string }>()
   const currentPage = parseInt(params[paramName] || '1')
 
+  if (paramName === 'pageNumber') {
+    if (!(currentPage > 0 && currentPage <= totalPages)) {
+      navigate('/shop/page/1')
+    }
+  }
+
+  if (paramName === 'id') {
+    if (!(currentPage > 0 && currentPage <= totalPages)) {
+      navigate('/cat/1')
+    }
+  }
+
   const previousPage = currentPage > 1 ? currentPage - 1 : 1
   const nextPage = currentPage < totalPages ? currentPage + 1 : totalPages
   const [inputPage, setInputPage] = useState(currentPage)
