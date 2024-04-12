@@ -84,6 +84,10 @@ export const Pagination = ({
     setInputPage(currentPage)
   }, [currentPage])
 
+  if(totalPages===0){
+    return;
+  }
+
   return (
     <Box>
       <PaginationLinkContainer $justifyContent="flex-end">

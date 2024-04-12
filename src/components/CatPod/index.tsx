@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Cat } from '../../Cat'
 import {
   Box,
@@ -15,10 +14,11 @@ interface CatPodProps {
   i: number
   startIndex: number
   cats: Cat[]
+  onFavorite: () => void
 }
 
-export const CatPod = ({ cat, i, startIndex, cats }: CatPodProps) => {
-  const [isFavorite, setIsFavorite] = useState(cat.isFavorite)
+export const CatPod = ({ cat, i, startIndex, cats, onFavorite }: CatPodProps) => {
+
   const dispatch = useDispatch()
 
   const handleClick = () => {
@@ -28,8 +28,9 @@ export const CatPod = ({ cat, i, startIndex, cats }: CatPodProps) => {
       }
       return c
     })
+
     dispatch(setArray(updatedCats))
-    setIsFavorite(!isFavorite)
+    onFavorite()
   }
 
   return (
@@ -50,7 +51,7 @@ export const CatPod = ({ cat, i, startIndex, cats }: CatPodProps) => {
               height="24"
               viewBox="0 0 24 24"
               stroke="red"
-              fill={isFavorite ? 'red' : 'var(--primary-background)'}
+              fill={cat.isFavorite ? 'red' : 'var(--primary-background)'}
             >
               <path d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z" />
             </svg>

@@ -68,7 +68,7 @@ export const NavigationBar = () => {
             </div>
           </li>
           <li>
-            <NavigationLink to="/favorites">Favorites</NavigationLink>
+            <NavigationLink to="/favorites/page/1">Favorites</NavigationLink>
           </li>
         </Ul>
         <Hamburger />

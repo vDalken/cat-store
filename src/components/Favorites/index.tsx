@@ -9,11 +9,20 @@ import { Div } from './styles'
 import { setArray } from '../../features/cats/catsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../app/store'
+import { useParams } from 'react-router-dom'
 
 export const Favorites = () => {
 
+  const {pageId} = useParams<{pageId: string}>()
+  const page = parseInt(pageId || '1')
+  const startIndex = (page - 1) * 10
+  const endIndex = page * 10
   const dispatch = useDispatch()
   const catsArray = useSelector((state:RootState) => state.cats.catsArray)
+  const favoriteCatsArray = catsArray.filter(cat => cat.isFavorite)
+  const catsOnPage = favoriteCatsArray.slice(startIndex, endIndex)
+
+
   if (!catsArray.find((cat) => cat.isFavorite === true)) {
     return <Div>No favorites found.</Div>
   }
@@ -29,7 +38,7 @@ export const Favorites = () => {
   return (
     <>
       <Div>
-        {catsArray.map((cat, i) => {
+        {catsOnPage.map((cat, i) => {
           if (cat.isFavorite) {
             return (
               <Box key={i}>
