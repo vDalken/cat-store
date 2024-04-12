@@ -44,7 +44,7 @@ export const NavigationBar = () => {
         </LogoContainer>*/}
         <Ul>
           <li>
-            <NavigationLink to="/cat-store">Homepage</NavigationLink>
+            <NavigationLink to="/">Homepage</NavigationLink>
           </li>
           <li>
             <div onClick={handleShopLinkClick}>
