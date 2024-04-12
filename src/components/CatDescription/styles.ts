@@ -65,7 +65,7 @@ export const Section = styled.div`
 `
 
 export const StyledLink = styled.a`
-  color: var(--blue);
+  color: #f5c6c6;
 `
 
 export const Break = styled.div`

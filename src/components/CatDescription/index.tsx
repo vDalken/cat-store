@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import catsData from '../../assets/data/cat_data.json'
 import { Cat } from '../../Cat'
 import {
@@ -12,31 +11,27 @@ import {
   Section,
   StyledLink
 } from './styles'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setIsAtCats } from '../../features/componentSlice'
+import { setCurrentCatUrl } from '../../features/urlSlice'
+import { useEffect } from 'react'
 
-interface CatDescriptionProps {
-  id: string
-  setCurrentUrl: (url: string) => void
-  setIsAtCats: (boo: boolean) => void
-}
-
-const CatDescription: React.FC<CatDescriptionProps> = ({
-  id,
-  setCurrentUrl,
-  setIsAtCats
-}) => {
-  const catId = parseInt(id)
+const CatDescription = () => {
+  const {id} = useParams<{id : string}>()
+  const catId = parseInt(id || '1')
   const catsArray = Object.values(catsData)
 
-  const cat: Cat | undefined = catsArray[catId]
+  const cat: Cat | undefined = catsArray[catId-1]
 
   const location = useLocation()
+  const dispatch = useDispatch()
 
-  setIsAtCats(true)
+  dispatch(setIsAtCats(true))
 
   useEffect(() => {
-    setCurrentUrl(location.pathname)
-  }, [location.pathname, setCurrentUrl])
+    dispatch(setCurrentCatUrl(location.pathname))
+  }, [location.pathname, dispatch])
 
   if (!cat) {
     return <div>Product not found</div>

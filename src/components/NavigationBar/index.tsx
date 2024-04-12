@@ -1,20 +1,15 @@
+import { useSelector } from 'react-redux'
 import { Hamburger } from '../Hamburger'
 import { Nav, Ul, NavigationLink } from './styles'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { RootState } from '../../app/store'
 
-export const NavigationBar = ({
-  currentShopUrl,
-  currentCatUrl,
-  isAtCats
-}: {
-  currentShopUrl: string
-  currentCatUrl: string
-  isAtCats: boolean
-}) => {
+export const NavigationBar = () => {
   const location = useLocation()
-
   const navigate = useNavigate()
-
+  const isAtCats = useSelector((state: RootState) => state.component.isAtCats)
+  const currentCatUrl = useSelector((state: RootState) => state.url.currentCatUrl)
+  const currentShopUrl = useSelector((state:RootState) => state.url.currentShopUrl)
   const handleCatsLinkClick = () => {
     if (currentCatUrl) {
       navigate(currentCatUrl)
@@ -27,7 +22,7 @@ export const NavigationBar = ({
     if (currentShopUrl) {
       navigate(currentShopUrl)
     } else {
-      navigate('/shop/page1')
+      navigate('/shop/page/1')
     }
   }
 
@@ -54,7 +49,7 @@ export const NavigationBar = ({
           <li>
             <div onClick={handleShopLinkClick}>
               <NavigationLink
-                to="/shop/page1"
+                to="/shop/page/1"
                 className={location.pathname.includes('/shop') ? 'active' : ''}
               >
                 Shop

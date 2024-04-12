@@ -1,12 +1,12 @@
+import { useDispatch } from 'react-redux'
 import { SleepingCat } from '../SleepingCat'
 import { CatContainer, Div, Text } from './styles'
+import { setIsAtCats } from '../../features/componentSlice'
 
-interface Homepage{
-  setIsAtCats: (boo: boolean) => void
-}
-
-export const Homepage = ({setIsAtCats}: Homepage) => {
-  setIsAtCats(false)
+export const Homepage = () => {
+  const dispatch = useDispatch()
+  
+  dispatch(setIsAtCats(false))
   return (
     <Div>
       <Text>

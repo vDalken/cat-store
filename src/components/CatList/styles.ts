@@ -12,10 +12,10 @@ export const CatCard = styled.div`
   justify-content: center;
   align-items: flex-end;
   cursor: pointer;
-  border-radius: 1rem 1rem 0 0;
+  
   overflow: hidden;
   position: relative;
- border: 8px solid #fff;
+ border: 16px solid #fff;
 
   @media screen and (max-width: 750px) {
     transform: scale(0.8);
@@ -30,6 +30,7 @@ export const Content = styled.div`
   width: 100%;
   height: 2rem;
   transition: all .5s ease;
+  background-color: #fff;
 
   >span{
     color: #000;
@@ -57,7 +58,7 @@ export const Box = styled.div`
   display: flex;
   border-radius: 1rem 1rem 1rem 1rem;
   flex-direction: column;
-  align-items: flex-start;
+
   transition: all.5s ease;
   
 

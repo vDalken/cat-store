@@ -6,20 +6,14 @@ import {
   StyledLink
 } from '../CatList/styles'
 import { Div } from './styles'
-import { Cat } from '../../Cat'
+import { setArray } from '../../features/cats/catsSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../app/store'
 
-interface FavoritesProps {
-  //COMMENT DO NOT TOUCH
-  catsArray: Cat[]
-  favoriteCats: Array<number>
-  setFavoriteCats: (array: Array<number>) => void
-  setCatsArray: (array: Array<Cat>) => void
-}
+export const Favorites = () => {
 
-export const Favorites = ({
-  catsArray,
-  setCatsArray
-}: FavoritesProps) => {
+  const dispatch = useDispatch()
+  const catsArray = useSelector((state:RootState) => state.cats.catsArray)
   if (!catsArray.find((cat) => cat.isFavorite === true)) {
     return <Div>No favorites found.</Div>
   }
@@ -29,7 +23,7 @@ export const Favorites = ({
       index === id ? { ...cat, isFavorite: !cat.isFavorite } : cat
     )
 
-    setCatsArray(updatedCatsArray)
+    dispatch(setArray(updatedCatsArray))
   }
 
   return (

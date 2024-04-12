@@ -1,68 +1,76 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Box, PaginationLink, PaginationLinkContainer, PageNumberContainer } from './styles';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from 'react'
+import {
+  Box,
+  PaginationLink,
+  PaginationLinkContainer,
+  PageNumberContainer
+} from './styles'
+import { useNavigate, useParams } from 'react-router-dom'
 
 interface PaginationProps {
-  currentPage: number;
-  totalPages: number;
-  previousButtonText: string;
-  nextButtonText: string;
-  partialRoute: string;
+  totalPages: number
+  previousButtonText: string
+  nextButtonText: string
+  partialRoute: string
+  paramName: string
 }
 
 export const Pagination = ({
-  currentPage,
   totalPages,
   previousButtonText,
   nextButtonText,
-  partialRoute
+  partialRoute,
+  paramName
 }: PaginationProps) => {
-  const navigate = useNavigate();
-  const previousPage = currentPage > 1 ? currentPage - 1 : 1;
-  const nextPage = currentPage < totalPages ? currentPage + 1 : totalPages;
-  const [inputPage, setInputPage] = useState(currentPage);
-  const inputRef = useRef<HTMLSpanElement>(null);
+  const navigate = useNavigate()
+  const params = useParams<{ [key: string]: string }>()
+  const currentPage = parseInt(params[paramName] || '1')
+
+  const previousPage = currentPage > 1 ? currentPage - 1 : 1
+  const nextPage = currentPage < totalPages ? currentPage + 1 : totalPages
+  const [inputPage, setInputPage] = useState(currentPage)
+  const inputRef = useRef<HTMLSpanElement>(null)
 
   const handlePressedKey = (event: KeyboardEvent) => {
     if (document.activeElement === inputRef.current) {
-      return; 
+      return
     }
     if (event.key === 'ArrowLeft') {
-      navigate(`${partialRoute}${previousPage}`);
+      navigate(`${partialRoute}${previousPage}`)
     }
     if (event.key === 'ArrowRight') {
-      navigate(`${partialRoute}${nextPage}`);
+      navigate(`${partialRoute}${nextPage}`)
     }
-  };
+  }
 
   const handleInputKeyPress = (event: React.KeyboardEvent<HTMLSpanElement>) => {
     if (event.key === 'Enter') {
-      const pageNumber = parseInt(inputRef.current?.innerText || '');
+      const pageNumber = parseInt(inputRef.current?.innerText || '')
       if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= totalPages) {
-        navigate(`${partialRoute}${pageNumber}`);
+        navigate(`${partialRoute}${pageNumber}`)
       }
     }
-  };
+  }
 
   const handleInputChange = () => {
     if (inputRef.current) {
-      const newValue = parseInt(inputRef.current.innerText);
+      const newValue = parseInt(inputRef.current.innerText)
       if (!isNaN(newValue)) {
-        setInputPage(newValue);
+        setInputPage(newValue)
       }
     }
-  };
+  }
 
   useEffect(() => {
-    window.addEventListener('keydown', handlePressedKey);
+    window.addEventListener('keydown', handlePressedKey)
     return () => {
-      window.removeEventListener('keydown', handlePressedKey);
-    };
-  });
+      window.removeEventListener('keydown', handlePressedKey)
+    }
+  })
 
   useEffect(() => {
-    setInputPage(currentPage);
-  }, [currentPage]);
+    setInputPage(currentPage)
+  }, [currentPage])
 
   return (
     <Box>
@@ -80,7 +88,7 @@ export const Pagination = ({
           ref={inputRef}
           onKeyDown={handleInputKeyPress}
           onBlur={handleInputChange}
-          suppressContentEditableWarning={true} 
+          suppressContentEditableWarning={true}
         >
           {inputPage}
         </span>
@@ -95,7 +103,7 @@ export const Pagination = ({
         )}
       </PaginationLinkContainer>
     </Box>
-  );
-};
+  )
+}
 
-export default Pagination;
+export default Pagination

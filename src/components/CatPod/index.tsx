@@ -7,41 +7,35 @@ import {
   ImageContainer,
   StyledLink
 } from '../CatList/styles'
+import { setArray } from '../../features/cats/catsSlice'
+import { useDispatch } from 'react-redux'
 
 interface CatPodProps {
   cat: Cat
   i: number
   startIndex: number
   cats: Cat[]
-  favoriteCats: Array<number>
-  setCatsArray: (array: Array<Cat>) => void
 }
 
-export const CatPod = ({
-  cat,
-  i,
-  startIndex,
-  setCatsArray,
-  cats
-}: CatPodProps) => {
-
+export const CatPod = ({ cat, i, startIndex, cats }: CatPodProps) => {
   const [isFavorite, setIsFavorite] = useState(cat.isFavorite)
+  const dispatch = useDispatch()
 
   const handleClick = () => {
     const updatedCats = cats.map((c, index) => {
-      if (index === i) {
-        return { ...c, isFavorite: !c.isFavorite };
+      if (index === i + startIndex) {
+        return { ...c, isFavorite: !c.isFavorite }
       }
-      return c;
-    });
-    setCatsArray(updatedCats);
-    setIsFavorite(!isFavorite);
-  };
+      return c
+    })
+    dispatch(setArray(updatedCats))
+    setIsFavorite(!isFavorite)
+  }
 
   return (
     <>
       <Box key={i}>
-        <StyledLink to={`/cat/${i + 1 + startIndex}`}>
+        <StyledLink to={`/cat/${i + startIndex}`}>
           <CatCard>
             <ImageContainer $backgroundImage={cat.image} />
           </CatCard>
@@ -56,7 +50,7 @@ export const CatPod = ({
               height="24"
               viewBox="0 0 24 24"
               stroke="red"
-              fill={isFavorite ? "red" : "var(--primary-background)"}
+              fill={isFavorite ? 'red' : 'var(--primary-background)'}
             >
               <path d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z" />
             </svg>
