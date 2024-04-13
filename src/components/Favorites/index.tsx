@@ -22,34 +22,32 @@ export const Favorites = () => {
   const favoriteCatsArray = catsArray.filter(cat => cat.isFavorite)
   const catsOnPage = favoriteCatsArray.slice(startIndex, endIndex)
 
-
   if (!catsArray.find((cat) => cat.isFavorite === true)) {
     return <Div>No favorites found.</Div>
   }
 
-  const handleClick = (id: number) => {
-    const updatedCatsArray = catsArray.map((cat, index) =>
-      index === id ? { ...cat, isFavorite: !cat.isFavorite } : cat
+  const handleClick = (id: string) => {
+    const updatedCatsArray = catsArray.map((cat) =>
+      cat.id === id ? { ...cat, isFavorite: !cat.isFavorite } : cat
     )
-
     dispatch(setArray(updatedCatsArray))
   }
 
   return (
     <>
       <Div>
-        {catsOnPage.map((cat, i) => {
+        {catsOnPage.map((cat) => {
           if (cat.isFavorite) {
             return (
-              <Box key={i}>
-                <StyledLink to={`/cat/${i + 1}`}>
+              <Box key={cat.id}>
+                <StyledLink to={`/cat/${cat.id}`}>
                   <CatCard>
                     <ImageContainer $backgroundImage={cat.image} />
                   </CatCard>
                 </StyledLink>
                 <Content>
                   <span>{cat.name}</span>
-                  <button onClick={() => handleClick(i)}>
+                  <button onClick={() => handleClick(cat.id)}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
