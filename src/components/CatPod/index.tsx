@@ -36,7 +36,7 @@ export const CatPod = ({ cat, i, startIndex, cats, onFavorite }: CatPodProps) =>
   return (
     <>
       <Box key={i}>
-        <StyledLink to={`/cat/${i + startIndex}`}>
+        <StyledLink to={`/cat/${eval(`${cat.id}+1`)}`}>
           <CatCard>
             <ImageContainer $backgroundImage={cat.image} />
           </CatCard>
