@@ -12,30 +12,27 @@ import { useDispatch } from 'react-redux'
 interface CatPodProps {
   cat: Cat
   i: number
-  startIndex: number
   cats: Cat[]
-  onFavorite: () => void
 }
 
-export const CatPod = ({ cat, i, startIndex, cats, onFavorite }: CatPodProps) => {
-
+export const CatPod = ({ cat, i, cats }: CatPodProps) => {
+  const rotateAngle = i % 2 === 0 ? -8 : 8;
   const dispatch = useDispatch()
 
   const handleClick = () => {
-    const updatedCats = cats.map((c, index) => {
-      if (index === i + startIndex) {
+    const updatedCats = cats.map((c) => {
+      if (c.id === cat.id) {
         return { ...c, isFavorite: !c.isFavorite }
       }
       return c
     })
-
+  
     dispatch(setArray(updatedCats))
-    onFavorite()
   }
 
   return (
     <>
-      <Box key={i}>
+      <Box key={i} $rotateAngle={rotateAngle}>
         <StyledLink to={`/cat/${eval(`${cat.id}+1`)}`}>
           <CatCard>
             <ImageContainer $backgroundImage={cat.image} />

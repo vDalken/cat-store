@@ -9,7 +9,7 @@ const above400px = (args: TemplateStringsArray) => css`
 `
 
 export const Nav = styled.nav`
-  background-color: #b77e75;
+  background-color: #db96a2;
   display: flex;
   justify-content: flex-end;
   align-items: center;

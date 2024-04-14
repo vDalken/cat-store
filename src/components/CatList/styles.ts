@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
 type ContainerProps = {
@@ -16,10 +16,6 @@ export const CatCard = styled.div`
   overflow: hidden;
   position: relative;
   border: 16px solid #fff;
-
-  @media screen and (max-width: 750px) {
-    transform: scale(0.8);
-  }
 `
 
 export const Content = styled.div`
@@ -51,7 +47,7 @@ export const Content = styled.div`
   }
 `
 
-export const Box = styled.div`
+export const Box = styled.div<{ $rotateAngle?: number }>`
   width: 20rem;
   height: 22rem;
   display: flex;
@@ -59,14 +55,56 @@ export const Box = styled.div`
   flex-direction: column;
 
   transition: all.5s ease;
-
+  transform: rotate(${props => props.$rotateAngle}deg);
   &:hover {
     background-color: var(--primary-background-color);
+    transform: scale(1);
 
     ${Content} {
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 750px) {
+    transform: scale(.8);
+
+    &:hover{
+      transform: scale(.8);
+      cursor: pointer;
+    }
+  }
+
+  ${props =>
+    props.$rotateAngle === -8 &&
+    css`
+      &::before {
+        content: '';
+        display: block;
+        background-color: #fff;
+        opacity: .6;
+        width: 100px;
+        height: 25px;
+        position: absolute;
+        top: -20px;
+        left: -30px;
+        transform: rotate(-24deg);
+      }
+    `}
+
+    ${props => props.$rotateAngle === 8 && css`
+    &::before {
+        content: '';
+        display: block;
+        background-color: #fff;
+        opacity: .6;
+        width: 100px;
+        height: 25px;
+        position: absolute;
+        top: -20px;
+        left: -30px;
+        transform: rotate(-24deg);
+      }
+    `}
 `
 
 export const ImageContainer = styled.div<ContainerProps>`
@@ -76,7 +114,6 @@ export const ImageContainer = styled.div<ContainerProps>`
   background-image: center;
   background-position: center;
   background-size: cover;
-
   background-image: url(${(props) => props.$backgroundImage});
   background-color: var(--pods-color);
   transition: transform 0.3s ease;

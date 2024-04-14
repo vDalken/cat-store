@@ -20,7 +20,7 @@ export function Hamburger() {
               </ItemLink>
             </li>
             <li>
-              <ItemLink onClick={handleClick} to="/shop/page1">
+              <ItemLink onClick={handleClick} to="/shop/page/1">
                 Shop
               </ItemLink>
             </li>
@@ -30,7 +30,7 @@ export function Hamburger() {
               </ItemLink>
             </li>
             <li>
-              <ItemLink onClick={handleClick} to="/favorites"> {/*to make deploy*/}
+              <ItemLink onClick={handleClick} to="/favorites/page/1"> {/*to make deploy*/}
                 Favorites
               </ItemLink>
             </li>

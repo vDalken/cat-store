@@ -84,8 +84,8 @@ export const NavigationBar = () => {
           <li>
             <NavigationLink to="/favorites/page/1">Favorites</NavigationLink>
           </li>
-          <select onChange={handleCatRaceChange}>
-            <option value="" selected disabled>
+          <select onChange={handleCatRaceChange} defaultValue="">
+            <option value="" disabled>
               Select a cat race
             </option>
             <option value="Siamese">Siamese</option>

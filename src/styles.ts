@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
         --highlight-text-color: #a56d4e;
         --pagination-background-color: #6B4A36;
 
-        --cats-color: var(--yellow);
+        --cats-color: #db96a2;
        
     }
 

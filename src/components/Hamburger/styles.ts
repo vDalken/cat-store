@@ -14,7 +14,7 @@ interface NavigationProps {
 }
 
 const COLORS = {
-  primaryDark: '#C7DFC5',
+  primaryDark: '#db96a2',
   primaryLight: '#373737'
 }
 
@@ -52,7 +52,7 @@ export const NavBackground = styled.div<NavBackgroundProps>`
 
 export const Icon = styled.span<IconProps>`
   position: relative;
-  background-color: ${(props) => (props.$clicked ? 'transparent' : '#C7DFC5')};
+  background-color: ${(props) => (props.$clicked ? 'transparent' : '#db96a2')};
   width: 3rem;
   height: 2px;
   display: inline-block;
@@ -62,7 +62,7 @@ export const Icon = styled.span<IconProps>`
   &::before,
   &::after {
     content: '';
-    background-color: #C7DFC5;
+    background-color: #db96a2;
     width: 3rem;
     height: 2px;
     display: inline-block;

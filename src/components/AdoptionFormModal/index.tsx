@@ -67,7 +67,7 @@ const AdoptionFormModal = ({
             <h3>CLIENT INFO</h3>
             <Info>
               <label>Name</label>
-              <input type="text" required placeholder="Name" />
+              <input type="text" required placeholder="Name"/>
             </Info>
 
             <Info>

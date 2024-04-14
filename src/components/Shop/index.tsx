@@ -31,7 +31,7 @@ const Shop = () => {
   return (
     <>
       <Div>
-        <CatList cats={catsOnPage} page={page} allCats={cats} />
+        <CatList cats={catsOnPage} allCats={cats}/>
       </Div>
     </>
   )

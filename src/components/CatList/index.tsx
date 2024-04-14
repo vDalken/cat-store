@@ -3,18 +3,14 @@ import { CatPod } from '../CatPod'
 
 interface CatListProps {
   cats: Cat[]
-  page: number
   allCats:Cat[]
 }
 
-const CatList = ({ cats, page, allCats} :CatListProps) => {
-  const startIndex = page === 1 ? 0 : (page -1) * 10
-
- 
+const CatList = ({ cats, allCats} :CatListProps) => { 
   return (
     <>
         {cats.map((cat, i) => (
-          <CatPod cat={cat}  i={i} startIndex={startIndex} cats={allCats} key={i} onFavorite={() => {}}/>
+          <CatPod cat={cat}  i={i} cats={allCats} key={i} />
       ))}
     </>
   )

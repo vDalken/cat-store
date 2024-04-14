@@ -21,11 +21,11 @@ import { useEffect, useState } from 'react'
 import AdoptionFormModal from '../AdoptionFormModal'
 
 const CatDescription = () => {
-  const {id} = useParams<{id : string}>()
+  const { id } = useParams<{ id: string }>()
   const catId = parseInt(id || '1')
   const catsArray = Object.values(catsData)
 
-  const cat: Cat | undefined = catsArray[catId-1]
+  const cat: Cat | undefined = catsArray[catId - 1]
 
   const location = useLocation()
   const dispatch = useDispatch()
@@ -80,10 +80,16 @@ const CatDescription = () => {
             <InfoSection>
               <h3>Adoption Fee</h3>
               <BuyZone>
-              <p>{cat.price}€</p>
-              <AdoptButton onClick={() => setShow(show => !show)}>Adopt</AdoptButton>
+                <p>{cat.price}€</p>
+                <AdoptButton onClick={() => setShow((show) => !show)}>
+                  Adopt
+                </AdoptButton>
               </BuyZone>
-              <AdoptionFormModal show={show} closeModal={() => setShow(false)} cat={cat}/>
+              <AdoptionFormModal
+                show={show}
+                closeModal={() => setShow(false)}
+                cat={cat}
+              />
             </InfoSection>
           </Info>
         </InfoContainer>

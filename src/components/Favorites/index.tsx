@@ -39,7 +39,7 @@ export const Favorites = () => {
         {catsOnPage.map((cat) => {
           if (cat.isFavorite) {
             return (
-              <Box key={cat.id}>
+              <Box key={cat.id} $rotateAngle={parseInt(cat.id) % 2 === 0 ? -8 : 8}>
                 <StyledLink to={`/cat/${cat.id}`}>
                   <CatCard>
                     <ImageContainer $backgroundImage={cat.image} />

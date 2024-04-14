@@ -1,20 +1,23 @@
 import { useDispatch } from 'react-redux'
-import { SleepingCat } from '../SleepingCat'
-import { CatContainer, Div, Text } from './styles'
+import { Div, Text } from './styles'
 import { setIsAtCats } from '../../features/componentSlice'
+import { useEffect } from 'react'
 
 export const Homepage = () => {
   const dispatch = useDispatch()
-  
-  dispatch(setIsAtCats(false))
+
+  useEffect(() =>{
+    dispatch(setIsAtCats(false))
+  },[dispatch])
   return (
     <Div>
       <Text>
-        <h1>Welcome to Purr-fect - Your favorite store in the world! This is where you'll find you furry friend.</h1>
+        <h1>Welcome to Purrfect</h1>
+        <p>
+          Your favorite store in the world! This is where you'll find you furry
+          friend.
+        </p>
       </Text>
-      <CatContainer>
-        <SleepingCat />
-      </CatContainer>
     </Div>
   )
 }

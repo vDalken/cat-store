@@ -6,7 +6,7 @@ export const MessageContainer = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 5rem;
-  color: var(--green);
+  color:#db96a2;
 `
 
 export const Div = styled.div`
@@ -15,4 +15,9 @@ export const Div = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+`
+
+export const CatContainer = styled.div`
+  max-width: 100%;
 `
