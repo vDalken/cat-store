@@ -12,10 +12,10 @@ export const CatCard = styled.div`
   justify-content: center;
   align-items: flex-end;
   cursor: pointer;
-  
+
   overflow: hidden;
   position: relative;
- border: 16px solid #fff;
+  border: 16px solid #fff;
 
   @media screen and (max-width: 750px) {
     transform: scale(0.8);
@@ -29,27 +29,26 @@ export const Content = styled.div`
   opacity: 0;
   width: 100%;
   height: 2rem;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   background-color: #fff;
 
-  >span{
+  > span {
     color: #000;
-    opacity: .85;
+    opacity: 0.85;
   }
 
-  >button{
+  > button {
     border: none;
-    background-color: var(--primary-background-color);
+    background-color: #fff;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    >svg{
-      transform: scale(.6);
+    > svg {
+      transform: scale(0.6);
     }
   }
-
 `
 
 export const Box = styled.div`
@@ -60,11 +59,9 @@ export const Box = styled.div`
   flex-direction: column;
 
   transition: all.5s ease;
-  
 
   &:hover {
-    background-color:var(--primary-background-color);
-    
+    background-color: var(--primary-background-color);
 
     ${Content} {
       opacity: 1;
@@ -81,7 +78,7 @@ export const ImageContainer = styled.div<ContainerProps>`
   background-size: cover;
 
   background-image: url(${(props) => props.$backgroundImage});
- background-color: var(--pods-color);
+  background-color: var(--pods-color);
   transition: transform 0.3s ease;
   position: absolute;
   top: 0;
@@ -104,5 +101,4 @@ export const CatName = styled.p`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   cursor: default;
-  
 `

@@ -1,5 +1,5 @@
 export interface Cat {
-  id: string
+  id?: string
   race: string
   name: string
   color: string

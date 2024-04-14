@@ -1,15 +1,21 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Hamburger } from '../Hamburger'
 import { Nav, Ul, NavigationLink } from './styles'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { RootState } from '../../app/store'
+import { setSelectedCatRace } from '../../features/cats/catsSlice'
 
 export const NavigationBar = () => {
   const location = useLocation()
   const navigate = useNavigate()
   const isAtCats = useSelector((state: RootState) => state.component.isAtCats)
-  const currentCatUrl = useSelector((state: RootState) => state.url.currentCatUrl)
-  const currentShopUrl = useSelector((state:RootState) => state.url.currentShopUrl)
+  const dispatch = useDispatch()
+  const currentCatUrl = useSelector(
+    (state: RootState) => state.url.currentCatUrl
+  )
+  const currentShopUrl = useSelector(
+    (state: RootState) => state.url.currentShopUrl
+  )
   const handleCatsLinkClick = () => {
     if (currentCatUrl) {
       navigate(currentCatUrl)
@@ -24,6 +30,12 @@ export const NavigationBar = () => {
     } else {
       navigate('/shop/page/1')
     }
+  }
+
+  const handleCatRaceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedRace = event.target.value
+    dispatch(setSelectedCatRace(selectedRace))
+    navigate(`/shop/${selectedRace}/page/1`)
   }
 
   return (
@@ -60,7 +72,9 @@ export const NavigationBar = () => {
             <div onClick={handleCatsLinkClick}>
               <NavigationLink
                 to="/cat/1"
-                className={location.pathname.includes('/cat') && isAtCats ? 'active' : ''}
+                className={
+                  location.pathname.includes('/cat') && isAtCats ? 'active' : ''
+                }
                 onClick={handleCatsLinkClick}
               >
                 Cats
@@ -70,6 +84,21 @@ export const NavigationBar = () => {
           <li>
             <NavigationLink to="/favorites/page/1">Favorites</NavigationLink>
           </li>
+          <select onChange={handleCatRaceChange}>
+            <option value="" selected disabled>
+              Select a cat race
+            </option>
+            <option value="Siamese">Siamese</option>
+            <option value="Maine Coon">Maine Coon</option>
+            <option value="Persian">Persian</option>
+            <option value="Sphynx">Sphynx</option>
+            <option value="Scottish Fold">Scottish Fold</option>
+            <option value="Bengal">Bengal</option>
+            <option value="Russian Blue">Russian Blue</option>
+            <option value="Ragdoll">Ragdoll</option>
+            <option value="Abyssinian">Abyssinian</option>
+            <option value="British Shorthair">British Shorthair</option>
+          </select>
         </Ul>
         <Hamburger />
       </Nav>

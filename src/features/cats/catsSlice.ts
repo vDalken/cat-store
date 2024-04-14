@@ -11,8 +11,9 @@ export const catsSlice = createSlice({
     initialState:{
         catsArray,
         totalCats: catsArray.length,
-        totalPages: catsArray.length / 10,
-        totalNumberOfFavoriteCats: 0
+        totalPages: Math.ceil(catsArray.length / 10),
+        totalNumberOfFavoriteCats: 0,
+        selectedCatRace: ''
       },
     reducers:{
         setArray: (state,action) =>{
@@ -25,10 +26,13 @@ export const catsSlice = createSlice({
                 cat.isFavorite = !cat.isFavorite;
                 state.totalNumberOfFavoriteCats = state.catsArray.filter(cat => cat.isFavorite).length;
             }
-        }
+        },
+        setSelectedCatRace: (state, action) => {
+            state.selectedCatRace = action.payload;
+        },
     }
 })
 
-export const {setArray, toggleFavorite} = catsSlice.actions
+export const {setArray, toggleFavorite, setSelectedCatRace} = catsSlice.actions
 
 export default catsSlice.reducer

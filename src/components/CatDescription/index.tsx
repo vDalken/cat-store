@@ -1,7 +1,9 @@
 import catsData from '../../assets/data/cat_data.json'
 import { Cat } from '../../Cat'
 import {
+  AdoptButton,
   Break,
+  BuyZone,
   Content,
   Div,
   Image,
@@ -15,7 +17,8 @@ import { useLocation, useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setIsAtCats } from '../../features/componentSlice'
 import { setCurrentCatUrl } from '../../features/urlSlice'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import AdoptionFormModal from '../AdoptionFormModal'
 
 const CatDescription = () => {
   const {id} = useParams<{id : string}>()
@@ -26,10 +29,10 @@ const CatDescription = () => {
 
   const location = useLocation()
   const dispatch = useDispatch()
-
-  dispatch(setIsAtCats(true))
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
+    dispatch(setIsAtCats(true))
     dispatch(setCurrentCatUrl(location.pathname))
   }, [location.pathname, dispatch])
 
@@ -76,7 +79,11 @@ const CatDescription = () => {
             <Break />
             <InfoSection>
               <h3>Adoption Fee</h3>
+              <BuyZone>
               <p>{cat.price}€</p>
+              <AdoptButton onClick={() => setShow(show => !show)}>Adopt</AdoptButton>
+              </BuyZone>
+              <AdoptionFormModal show={show} closeModal={() => setShow(false)} cat={cat}/>
             </InfoSection>
           </Info>
         </InfoContainer>

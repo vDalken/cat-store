@@ -123,3 +123,22 @@ export const ButtonHolder = styled.div`
     border: none;
   }
 `
+
+export const AdoptButton = styled.button`
+  background-color: #b77e75;
+  border: none;
+  color: #fff;
+  padding: 0.2rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #fff;
+    color: #b77e75;
+  }
+`
+
+export const BuyZone = styled.div`
+display: flex;
+gap: 1rem;
+`
