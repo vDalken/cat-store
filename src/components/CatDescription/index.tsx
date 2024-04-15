@@ -1,4 +1,3 @@
-import catsData from '../../assets/data/cat_data.json'
 import { Cat } from '../../Cat'
 import {
   AdoptButton,
