@@ -101,3 +101,10 @@ export const AdoptButton = styled.button`
         color: #b77e75;
     }
 `
+
+export const CenterDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: pink;
+`

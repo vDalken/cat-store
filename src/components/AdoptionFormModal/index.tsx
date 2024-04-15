@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom'
 import {
-    AdoptButton,
+  AdoptButton,
+  CenterDiv,
   CloseButton,
   Column,
   CustomTextarea,
@@ -10,6 +11,7 @@ import {
   Overlay
 } from './styles'
 import { Cat } from '../../Cat'
+import { useState } from 'react'
 
 interface AdoptionFormModalProps {
   show: boolean
@@ -22,6 +24,7 @@ const AdoptionFormModal = ({
   closeModal,
   cat
 }: AdoptionFormModalProps) => {
+  const [wasClicked, setWasClicked] = useState(false)
   const modalElement = document.getElementById('modal')
   if (!modalElement) return null
   if (!show) return null
@@ -67,7 +70,7 @@ const AdoptionFormModal = ({
             <h3>CLIENT INFO</h3>
             <Info>
               <label>Name</label>
-              <input type="text" required placeholder="Name"/>
+              <input type="text" required placeholder="Name" />
             </Info>
 
             <Info>
@@ -99,8 +102,11 @@ const AdoptionFormModal = ({
             </Info>
           </Column>
         </Form>
-        <AdoptButton>SENT REQUEST TO ADOPT</AdoptButton>
+        <AdoptButton onClick={() => setWasClicked(true)}>
+          SENT REQUEST TO ADOPT
+        </AdoptButton>
 
+        <CenterDiv>{wasClicked ? "REQUEST SENT" : ''}</CenterDiv>
         <CloseButton onClick={closeModal}>
           <svg
             clip-rule="evenodd"
