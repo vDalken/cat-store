@@ -26,7 +26,7 @@ export const CatPod = ({ cat, i, cats }: CatPodProps) => {
       }
       return c
     })
-  
+    
     dispatch(setArray(updatedCats))
   }
 

@@ -144,3 +144,15 @@ export const BuyZone = styled.div`
 display: flex;
 gap: 1rem;
 `
+
+export const NameInfo = styled.div`
+  display: flex;
+  gap: 1rem;
+
+  >button{
+    background-color: transparent;
+    border: none;
+    transform: scale(.6);
+    cursor: pointer;
+  }
+`
